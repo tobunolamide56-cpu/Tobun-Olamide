@@ -1,0 +1,1670 @@
+Tobun-Olamide/
+│
+├── index.html
+│
+└── images/
+    └── coach-portrait.jpg
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#211432">
+  <meta name="description" content="Explore the TCA AI Content Creation Masterclass. Learn AI realistic photoshoots, graphics design, podcast videos, UGC adverts, AI influencers and short video creation.">
+  <title>TCA | AI Content Creation Masterclass</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --purple: #8654b5;
+      --purple-light: #c9a9e9;
+      --deep: #211432;
+      --deep2: #302044;
+      --cream: #faf7f3;
+      --lavender: #eee7f3;
+      --text: #30263a;
+      --muted: #817788;
+      --white: #fff;
+      --serif: "Playfair Display", Georgia, serif;
+      --sans: "DM Sans", sans-serif;
+      --heading: "Manrope", sans-serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--sans);
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+
+    .container {
+      width: min(1180px, calc(100% - 56px));
+      margin: auto;
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 2.5px;
+      font-weight: 700;
+      color: var(--purple);
+      text-transform: uppercase;
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      height: 82px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 20;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--heading);
+      font-weight: 800;
+      font-size: 20px;
+      letter-spacing: -1px;
+    }
+
+    .logo-mark {
+      background: var(--purple);
+      color: white;
+      width: 34px;
+      height: 34px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+    }
+
+    .logo span:last-child {
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      font-size: 12px;
+      color: #776c80;
+    }
+
+    .nav-links a:hover { color: var(--purple); }
+
+    .nav-button {
+      border: 1px solid #d9cde1;
+      padding: 12px 19px;
+      border-radius: 30px;
+      font-size: 11px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .nav-button:hover {
+      background: var(--deep);
+      color: white;
+      border-color: var(--deep);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 0;
+      background: transparent;
+      font-size: 25px;
+      cursor: pointer;
+      color: var(--deep);
+    }
+
+    /* HERO */
+
+    .hero {
+      background: var(--deep);
+      color: white;
+      min-height: 670px;
+      border-radius: 5px;
+      padding: 75px 8%;
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.08fr .92fr;
+      align-items: center;
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero::before {
+      width: 650px;
+      height: 650px;
+      right: -100px;
+      top: -190px;
+    }
+
+    .hero::after {
+      width: 470px;
+      height: 470px;
+      right: -5px;
+      top: -100px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 3;
+      animation: fadeUp .9s ease both;
+    }
+
+    .hero-label {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #d5b9ed;
+      font-size: 10px;
+      letter-spacing: 2.4px;
+      font-weight: 700;
+    }
+
+    .hero-label::before {
+      content: "";
+      width: 7px;
+      height: 7px;
+      background: #c49be7;
+      border-radius: 50%;
+    }
+
+    .hero h1 {
+      font-family: var(--heading);
+      font-size: clamp(46px, 6.1vw, 76px);
+      line-height: 1.04;
+      letter-spacing: -4px;
+      margin: 30px 0 24px;
+      font-weight: 700;
+    }
+
+    .hero h1 em {
+      font-family: var(--serif);
+      color: var(--purple-light);
+      font-weight: 500;
+    }
+
+    .hero-description {
+      max-width: 450px;
+      color: #d1c7da;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 33px;
+      flex-wrap: wrap;
+    }
+
+    .primary-button {
+      background: white;
+      color: var(--deep);
+      padding: 16px 22px;
+      display: inline-flex;
+      align-items: center;
+      gap: 17px;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: 3px;
+      transition: .3s;
+    }
+
+    .primary-button:hover {
+      background: var(--purple-light);
+      transform: translateY(-3px);
+    }
+
+    .secondary-link {
+      color: #e6d9ee;
+      font-size: 11px;
+      border-bottom: 1px solid #a88bbd;
+      padding-bottom: 7px;
+    }
+
+    .hero-note {
+      margin-top: 54px;
+      font-size: 8px;
+      letter-spacing: 1.6px;
+      color: #b9a9c8;
+      line-height: 2;
+    }
+
+    .hero-visual {
+      height: 490px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      animation: floatIn 1s .2s ease both;
+    }
+
+    .portrait-frame {
+      width: 315px;
+      height: 410px;
+      padding: 9px;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 180px 180px 5px 5px;
+      background: linear-gradient(140deg, #ffffff44, #ffffff05);
+      transform: rotate(3deg);
+      position: relative;
+      z-index: 2;
+    }
+
+    .portrait-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      border-radius: 170px 170px 3px 3px;
+      display: block;
+    }
+
+    .portrait-glow {
+      position: absolute;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, #9669c655, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .floating-card {
+      position: absolute;
+      z-index: 4;
+      background: white;
+      color: var(--deep);
+      padding: 14px 17px;
+      font-size: 9px;
+      letter-spacing: 1px;
+      box-shadow: 0 15px 40px #0003;
+    }
+
+    .floating-card strong {
+      display: block;
+      font-size: 11px;
+      margin-top: 5px;
+    }
+
+    .card-one { top: 65px; right: -3px; }
+    .card-two { bottom: 58px; left: -5px; }
+
+    .hero-stamp {
+      position: absolute;
+      bottom: 3px;
+      right: 5px;
+      color: #d4bee8;
+      font-size: 10px;
+      line-height: 1.7;
+      letter-spacing: 2px;
+      transform: rotate(-8deg);
+    }
+
+    /* INTRO */
+
+    .intro {
+      background: var(--lavender);
+      margin-top: 65px;
+      padding: 105px 0;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr 1fr;
+      align-items: end;
+      gap: 35px;
+    }
+
+    .intro h2,
+    .section-heading h2,
+    .bonus h2,
+    .coach h2,
+    .access h2,
+    .final-cta h2 {
+      font-family: var(--heading);
+      font-size: clamp(40px, 5vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -3px;
+    }
+
+    .intro h2 span { color: var(--purple); }
+
+    .intro-copy {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    /* MODULES */
+
+    .curriculum { padding: 115px 0 125px; }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      margin-bottom: 42px;
+      gap: 20px;
+    }
+
+    .section-heading h2 { margin-top: 18px; }
+
+    .section-heading h2 em,
+    .bonus h2 em,
+    .coach h2 em,
+    .access h2 em {
+      font-family: var(--serif);
+      color: var(--purple);
+      font-weight: 500;
+    }
+
+    .carousel-buttons { display: flex; gap: 9px; }
+
+    .carousel-buttons button {
+      height: 43px;
+      width: 43px;
+      border: 1px solid #d9cde1;
+      background: transparent;
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--deep);
+      font-size: 19px;
+      transition: .2s;
+    }
+
+    .carousel-buttons button:hover {
+      background: var(--deep);
+      color: white;
+    }
+
+    .module-track {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: calc((100% - 44px) / 3);
+      gap: 22px;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      scroll-behavior: smooth;
+      padding-bottom: 10px;
+    }
+
+    .module-track::-webkit-scrollbar { display: none; }
+
+    .module-card {
+      background: white;
+      border: 1px solid #eee8f0;
+      scroll-snap-align: start;
+      min-width: 0;
+    }
+
+    .module-art {
+      height: 235px;
+      position: relative;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      background: #39274b;
+      color: white;
+    }
+
+    .module-art::before,
+    .module-art::after {
+      content: "";
+      position: absolute;
+      width: 210px;
+      height: 210px;
+      border: 1px solid currentColor;
+      border-radius: 50%;
+      opacity: .2;
+      transition: .5s;
+    }
+
+    .module-art::after {
+      width: 280px;
+      height: 280px;
+    }
+
+    .module-card:hover .module-art::before {
+      transform: scale(1.15);
+    }
+
+    .module-card:hover .module-art::after {
+      transform: scale(.9);
+    }
+
+    .module-icon {
+      width: 95px;
+      height: 95px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #ffffff66;
+      border-radius: 50%;
+      background: #ffffff18;
+      font-size: 36px;
+      backdrop-filter: blur(8px);
+      z-index: 1;
+    }
+
+    .module-number {
+      position: absolute;
+      top: 17px;
+      left: 19px;
+      font-family: var(--serif);
+      font-size: 18px;
+    }
+
+    .module-tag {
+      position: absolute;
+      bottom: 17px;
+      right: 18px;
+      font-size: 8px;
+      letter-spacing: 1.6px;
+    }
+
+    .art-2 { background: #d8c6e7; color: #493356; }
+    .art-3 { background: #a88cbe; }
+    .art-4 { background: #dfd0c8; color: #533e4d; }
+    .art-5 { background: #6e557f; }
+    .art-6 { background: #292037; }
+
+    .module-info { padding: 24px 22px 28px; }
+
+    .module-info small {
+      color: var(--purple);
+      font-size: 8px;
+      letter-spacing: 1.6px;
+      font-weight: 700;
+    }
+
+    .module-info h3 {
+      font-family: var(--heading);
+      font-size: 18px;
+      margin: 12px 0 10px;
+      letter-spacing: -.5px;
+    }
+
+    .module-info p {
+      font-size: 11px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    .carousel-hint {
+      margin-top: 25px;
+      color: #9b91a2;
+      font-size: 8px;
+      letter-spacing: 1.8px;
+    }
+
+    /* CREATIVE SHOWCASE */
+
+    .showcase {
+      background: #eee7f3;
+      padding: 100px 0;
+    }
+
+    .showcase-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 25px;
+      margin-bottom: 38px;
+    }
+
+    .showcase-heading h2 {
+      font-family: var(--heading);
+      font-size: clamp(38px, 5vw, 56px);
+      letter-spacing: -3px;
+      margin-top: 17px;
+    }
+
+    .showcase-heading p {
+      max-width: 310px;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+
+    .showcase-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr .8fr;
+      gap: 15px;
+    }
+
+    .sample {
+      min-height: 290px;
+      background: linear-gradient(145deg, #bda6d1, #4e365f);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      color: white;
+    }
+
+    .sample:nth-child(2) {
+      background: linear-gradient(145deg, #e2d4c8, #92748e);
+    }
+
+    .sample:nth-child(3) {
+      background: linear-gradient(145deg, #80649a, #281a38);
+    }
+
+    .sample img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+    }
+
+    .sample-placeholder {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+      padding: 20px;
+    }
+
+    .sample-placeholder span {
+      font-size: 38px;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .sample-placeholder small {
+      font-size: 9px;
+      letter-spacing: 1.5px;
+    }
+
+    .sample-caption {
+      position: absolute;
+      z-index: 2;
+      bottom: 15px;
+      left: 15px;
+      background: #211432d9;
+      padding: 10px 13px;
+      color: white;
+      font-size: 9px;
+      letter-spacing: 1px;
+    }
+
+    /* BONUS */
+
+    .bonus {
+      background: var(--deep);
+      color: white;
+      padding: 105px 0;
+    }
+
+    .bonus-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 90px;
+      align-items: center;
+    }
+
+    .bonus h2 { margin-top: 20px; }
+
+    .bonus-copy {
+      max-width: 400px;
+      color: #c6b9d0;
+      font-size: 13px;
+      line-height: 1.9;
+      margin-top: 24px;
+    }
+
+    .bonus-list { border-top: 1px solid #ffffff35; }
+
+    .bonus-item {
+      display: grid;
+      grid-template-columns: 46px 1fr 20px;
+      align-items: center;
+      gap: 17px;
+      padding: 26px 0;
+      border-bottom: 1px solid #ffffff35;
+    }
+
+    .bonus-icon {
+      width: 43px;
+      height: 43px;
+      display: grid;
+      place-items: center;
+      border: 1px solid #ffffff55;
+      border-radius: 50%;
+      font-size: 17px;
+      color: #d4b4ed;
+    }
+
+    .bonus-item small {
+      color: #c8a4e8;
+      font-size: 8px;
+      letter-spacing: 1.5px;
+    }
+
+    .bonus-item h3 {
+      font-family: var(--heading);
+      font-size: 16px;
+      margin: 7px 0;
+    }
+
+    .bonus-item p {
+      color: #c7bacf;
+      font-size: 10px;
+      line-height: 1.7;
+    }
+
+    /* COACH */
+
+    .coach {
+      padding: 120px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 100px;
+      align-items: center;
+    }
+
+    .coach-image {
+      height: 490px;
+      position: relative;
+      background: #d6c5e1;
+      overflow: hidden;
+    }
+
+    .coach-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    .coach-caption {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: var(--deep);
+      color: white;
+      padding: 16px 20px;
+      font-size: 8px;
+      letter-spacing: 1.5px;
+    }
+
+    .coach h2 { margin: 20px 0 25px; }
+
+    .coach-copy {
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .coach-copy p + p { margin-top: 14px; }
+
+    .signature {
+      margin-top: 30px;
+      font-family: var(--serif);
+      font-size: 23px;
+      color: #654878;
+      font-style: italic;
+    }
+
+    .signature small {
+      display: block;
+      font-family: var(--sans);
+      font-size: 9px;
+      font-style: normal;
+      color: #9a8e9f;
+      margin-top: 5px;
+      letter-spacing: 1px;
+    }
+
+    /* ACCESS */
+
+    .access {
+      background: var(--lavender);
+      padding: 95px 0;
+    }
+
+    .access-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+
+    .access h2 { margin-top: 20px; }
+
+    .access-list {
+      display: grid;
+      gap: 21px;
+    }
+
+    .access-point {
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      color: #65596e;
+      font-size: 12px;
+    }
+
+    .check {
+      color: var(--purple);
+      font-size: 19px;
+      font-weight: 700;
+    }
+
+    /* FAQ */
+
+    .faq-section { padding: 110px 0; }
+
+    .faq-heading {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .faq-heading h2 {
+      font-family: var(--heading);
+      font-size: 45px;
+      letter-spacing: -2px;
+      margin-top: 17px;
+    }
+
+    .faq-list {
+      max-width: 760px;
+      margin: auto;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #e5dce9;
+    }
+
+    .faq-question {
+      width: 100%;
+      background: transparent;
+      border: 0;
+      padding: 23px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      text-align: left;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      color: var(--deep);
+    }
+
+    .faq-question span:last-child {
+      font-size: 20px;
+      color: var(--purple);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .35s ease;
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.9;
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 180px;
+      padding-bottom: 20px;
+    }
+
+    /* FINAL CTA */
+
+    .final-cta { padding: 0 0 100px; }
+
+    .cta-card {
+      min-height: 490px;
+      background: #8054a8;
+      color: white;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 65px 25px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-card::before,
+    .cta-card::after {
+      content: "";
+      position: absolute;
+      border: 1px solid #ffffff35;
+      border-radius: 50%;
+      width: 470px;
+      height: 470px;
+    }
+
+    .cta-card::after {
+      width: 650px;
+      height: 650px;
+    }
+
+    .cta-content { position: relative; z-index: 2; }
+
+    .cta-card .eyebrow { color: #eadcf5; }
+
+    .cta-card h2 {
+      margin: 20px 0;
+      font-size: clamp(40px, 5vw, 60px);
+    }
+
+    .cta-card h2 em {
+      font-family: var(--serif);
+      font-weight: 500;
+      color: #ead8f7;
+    }
+
+    .cta-description {
+      color: #eee2f5;
+      font-size: 12px;
+    }
+
+    .price-label {
+      font-size: 8px;
+      letter-spacing: 2px;
+      margin-top: 27px;
+    }
+
+    .price {
+      font-family: var(--heading);
+      font-size: 39px;
+      font-weight: 800;
+      margin: 7px 0 22px;
+    }
+
+    .cta-button {
+      background: white;
+      color: var(--deep);
+      display: inline-flex;
+      align-items: center;
+      gap: 15px;
+      padding: 17px 24px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .25s;
+    }
+
+    .cta-button:hover { transform: translateY(-3px); }
+
+    .secure-note {
+      display: block;
+      font-size: 9px;
+      color: #e9dff0;
+      margin-top: 15px;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      min-height: 100px;
+      border-top: 1px solid #e5dce9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      color: #84798c;
+      flex-wrap: wrap;
+      padding: 20px 0;
+    }
+
+    .footer small { font-size: 9px; }
+
+    .footer-tagline { font-size: 10px; }
+
+    .back-top {
+      font-size: 9px;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity .75s ease, transform .75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(25px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes floatIn {
+      from { opacity: 0; transform: translateY(20px) scale(.96); }
+      to { opacity: 1; transform: translateY(0) scale(1); }
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width: 850px) {
+      .nav-links { gap: 17px; }
+      .hero { padding: 65px 5%; }
+      .hero h1 { font-size: 55px; }
+      .portrait-frame { width: 270px; height: 370px; }
+      .intro-grid { grid-template-columns: 1fr 1fr; }
+      .intro-grid .eyebrow { grid-column: 1 / -1; }
+      .module-track { grid-auto-columns: calc((100% - 22px) / 2); }
+      .bonus-grid, .coach, .access-grid { gap: 45px; }
+    }
+
+    @media(max-width: 650px) {
+      .container { width: calc(100% - 32px); }
+
+      .navbar { height: 72px; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 22px;
+        flex-direction: column;
+        gap: 20px;
+        box-shadow: 0 12px 25px #21143215;
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-button { margin-left: auto; margin-right: 15px; padding: 10px 13px; }
+      .menu-toggle { display: block; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 48px 25px 58px;
+        min-height: auto;
+      }
+
+      .hero h1 {
+        font-size: clamp(46px, 11vw, 63px);
+        letter-spacing: -3px;
+      }
+
+      .hero-description { font-size: 13px; }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 17px;
+      }
+
+      .hero-visual { height: 390px; margin-top: 15px; }
+
+      .portrait-frame { height: 345px; width: 250px; }
+
+      .card-one { top: 23px; right: 0; }
+      .card-two { bottom: 25px; left: 0; }
+
+      .hero-note { margin-top: 35px; }
+
+      .intro { margin-top: 35px; padding: 75px 0; }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 23px;
+      }
+
+      .intro-grid .eyebrow { grid-column: auto; }
+      .intro h2 { font-size: 48px; }
+
+      .curriculum { padding: 80px 0; }
+
+      .section-heading { align-items: flex-end; }
+      .section-heading h2 { font-size: 40px; }
+      .carousel-buttons { gap: 5px; }
+      .carousel-buttons button { width: 35px; height: 35px; }
+
+      .module-track { grid-auto-columns: 84%; }
+
+      .showcase { padding: 75px 0; }
+
+      .showcase-heading {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .showcase-grid { grid-template-columns: 1fr 1fr; }
+      .sample:first-child { grid-column: 1 / -1; min-height: 250px; }
+      .sample { min-height: 210px; }
+
+      .bonus { padding: 75px 0; }
+      .bonus-grid { grid-template-columns: 1fr; gap: 40px; }
+      .bonus h2 { font-size: 43px; }
+
+      .coach {
+        padding: 80px 0;
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .coach-image { height: 430px; }
+      .coach h2 { font-size: 45px; }
+
+      .access { padding: 75px 0; }
+      .access-grid { grid-template-columns: 1fr; gap: 35px; }
+      .access h2 { font-size: 45px; }
+
+      .faq-section { padding: 80px 0; }
+      .faq-heading h2 { font-size: 38px; }
+
+      .final-cta { padding-bottom: 65px; }
+      .cta-card { min-height: 450px; }
+      .cta-card h2 { font-size: 43px; }
+
+      .footer { justify-content: space-between; }
+      .footer-tagline { width: 100%; order: 3; }
+    }
+
+    @media(prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        transition-duration: .01ms !important;
+      }
+      .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+
+  <nav class="navbar container">
+    <a class="logo" href="#home">
+      <span class="logo-mark">T</span>
+      TCA<span>.</span>
+    </a>
+
+    <div class="nav-links" id="navLinks">
+      <a href="#about">The experience</a>
+      <a href="#curriculum">What you'll learn</a>
+      <a href="#showcase">Creative showcase</a>
+      <a href="#coach">Your coach</a>
+    </div>
+
+    <a class="nav-button" href="https://selar.com/1j5lt8b44l" target="_blank" rel="noopener">
+      Get access ↗
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero container" id="home">
+    <div class="hero-content">
+      <div class="hero-label">TONIA'S CREATIVES ACADEMY PRESENTS</div>
+
+      <h1>
+        Make your<br>
+        <em>ideas</em> impossible<br>
+        to ignore<span style="color:#c9a9e9">.</span>
+      </h1>
+
+      <p class="hero-description">
+        Explore the creative possibilities of Artificial Intelligence.
+        Learn to create realistic photoshoots, graphics, podcast videos,
+        UGC adverts and more with AI.
+      </p>
+
+      <div class="hero-actions">
+        <a class="primary-button" href="https://selar.com/1j5lt8b44l" target="_blank" rel="noopener">
+          Explore the masterclass <span>↗</span>
+        </a>
+
+        <a class="secondary-link" href="#curriculum">
+          Discover what you'll learn ↓
+        </a>
+      </div>
+
+      <p class="hero-note">
+        PRE-RECORDED LESSONS · LIFETIME ACCESS · WHATSAPP COACH SUPPORT
+      </p>
+    </div>
+
+    <div class="hero-visual">
+      <div class="portrait-glow"></div>
+
+      <div class="portrait-frame">
+        <img src="images/coach-portrait.jpg" alt="Olamide Tonia, founder of Tonia's Creatives Academy">
+      </div>
+
+      <div class="floating-card card-one">
+        CREATIVE POSSIBILITIES
+        <strong>Powered by AI ✦</strong>
+      </div>
+
+      <div class="floating-card card-two">
+        06 CREATIVE SKILLS
+        <strong>ONE MASTERCLASS</strong>
+      </div>
+
+      <div class="hero-stamp">
+        LEARN<br>CREATE<br>BUILD ↗
+      </div>
+    </div>
+  </header>
+
+  <!-- INTRODUCTION -->
+
+  <section class="intro" id="about">
+    <div class="container intro-grid reveal">
+      <p class="eyebrow">A NEW WAY TO CREATE</p>
+
+      <h2>
+        Less guessing.<br>
+        <span>More making.</span>
+      </h2>
+
+      <p class="intro-copy">
+        AI is changing how digital content gets created.
+        This masterclass introduces you to practical creative workflows
+        that can help you turn your ideas into visual content.
+        Learn the tools, practise the process and explore what you can create.
+      </p>
+    </div>
+  </section>
+
+  <!-- COURSE MODULES -->
+
+  <section class="curriculum container" id="curriculum">
+    <div class="section-heading reveal">
+      <div>
+        <p class="eyebrow">INSIDE THE MASTERCLASS</p>
+        <h2>
+          Six ways to turn<br>
+          an idea into <em>content.</em>
+        </h2>
+      </div>
+
+      <div class="carousel-buttons">
+        <button id="prevSlide" aria-label="Previous modules">←</button>
+        <button id="nextSlide" aria-label="Next modules">→</button>
+      </div>
+    </div>
+
+    <div class="module-track" id="moduleTrack">
+
+      <article class="module-card">
+        <div class="module-art art-1">
+          <span class="module-number">01</span>
+          <div class="module-icon">✧</div>
+          <span class="module-tag">IMAGE CREATION</span>
+        </div>
+        <div class="module-info">
+          <small>MODULE 01</small>
+          <h3>AI Realistic Photoshoot</h3>
+          <p>Explore how to create realistic AI portraits and polished visual photoshoots.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <div class="module-art art-2">
+          <span class="module-number">02</span>
+          <div class="module-icon">✎</div>
+          <span class="module-tag">VISUAL DESIGN</span>
+        </div>
+        <div class="module-info">
+          <small>MODULE 02</small>
+          <h3>AI Graphics Design</h3>
+          <p>Turn creative ideas into engaging graphics for brands and digital platforms.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <div class="module-art art-3">
+          <span class="module-number">03</span>
+          <div class="module-icon">◉</div>
+          <span class="module-tag">VIDEO CONTENT</span>
+        </div>
+        <div class="module-info">
+          <small>MODULE 03</small>
+          <h3>AI Podcast Videos</h3>
+          <p>Explore AI-powered podcast-style videos and talking content.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <div class="module-art art-4">
+          <span class="module-number">04</span>
+          <div class="module-icon">▷</div>
+          <span class="module-tag">BRAND CONTENT</span>
+        </div>
+        <div class="module-info">
+          <small>MODULE 04</small>
+          <h3>AI UGC Advert Video</h3>
+          <p>Create creator-style advert videos for product promotion and storytelling.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <div class="module-art art-5">
+          <span class="module-number">05</span>
+          <div class="module-icon">✺</div>
+          <span class="module-tag">CHARACTER DESIGN</span>
+        </div>
+        <div class="module-info">
+          <small>MODULE 05</small>
+          <h3>AI Influencer Creation</h3>
+          <p>Explore how to develop virtual personalities for digital content creation.</p>
+        </div>
+      </article>
+
+      <article class="module-card">
+        <div class="module-art art-6">
+          <span class="module-number">06</span>
+          <div class="module-icon">▶</div>
+          <span class="module-tag">MOTION & VIDEO</span>
+        </div>
+        <div class="module-info">
+          <small>MODULE 06</small>
+          <h3>AI Short Video Creation</h3>
+          <p>Explore AI video workflows for short-form and social media content.</p>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="carousel-hint">DRAG TO EXPLORE ALL SIX MODULES →</p>
+  </section>
+
+  <!-- CREATIVE SHOWCASE -->
+
+  <section class="showcase" id="showcase">
+    <div class="container">
+      <div class="showcase-heading reveal">
+        <div>
+          <p class="eyebrow">A GLIMPSE OF WHAT'S POSSIBLE</p>
+          <h2>Ideas brought<br>to <em style="font-family:var(--serif);color:var(--purple)">life.</em></h2>
+        </div>
+
+        <p>
+          A selection of creative work made with AI.
+          Your own creative experiments can begin with what you'll explore here.
+        </p>
+      </div>
+
+      <div class="showcase-grid reveal">
+
+        <!-- Replace these placeholders with your own sample images later. -->
+
+        <div class="sample">
+          <div class="sample-placeholder">
+            <span>✧</span>
+            <small>AI PHOTOSHOOT</small>
+          </div>
+          <div class="sample-caption">01 / REALISTIC VISUALS</div>
+        </div>
+
+        <div class="sample">
+          <div class="sample-placeholder">
+            <span>◈</span>
+            <small>AI GRAPHICS</small>
+          </div>
+          <div class="sample-caption">02 / GRAPHIC DESIGN</div>
+        </div>
+
+        <div class="sample">
+          <div class="sample-placeholder">
+            <span>▷</span>
+            <small>AI VIDEO</small>
+          </div>
+          <div class="sample-caption">03 / VIDEO CREATION</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BONUSES -->
+
+  <section class="bonus">
+    <div class="container bonus-grid reveal">
+
+      <div>
+        <p class="eyebrow" style="color:#c9a9e9">MORE IN YOUR ACCESS</p>
+
+        <h2>
+          Thoughtful extras.<br>
+          <em>More room to explore.</em>
+        </h2>
+
+        <p class="bonus-copy">
+          Your masterclass access also comes with two additional bonuses
+          to complement your learning experience.
+        </p>
+      </div>
+
+      <div class="bonus-list">
+
+        <div class="bonus-item">
+          <div class="bonus-icon">♛</div>
+          <div>
+            <small>BONUS 01</small>
+            <h3>CapCut Pro Access</h3>
+            <p>Additional CapCut Pro access included with your enrolment.</p>
+          </div>
+          <span>↗</span>
+        </div>
+
+        <div class="bonus-item">
+          <div class="bonus-icon">◎</div>
+          <div>
+            <small>BONUS 02</small>
+            <h3>How to Create a UK TikTok Account</h3>
+            <p>A bonus walkthrough to explore UK TikTok account creation.</p>
+          </div>
+          <span>↗</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MEET THE COACH -->
+
+  <section class="coach container" id="coach">
+
+    <div class="coach-image reveal">
+      <img src="images/coach-portrait.jpg" alt="Olamide Tonia">
+      <div class="coach-caption">THE PERSON BEHIND THE PROCESS ✳</div>
+    </div>
+
+    <div class="reveal">
+      <p class="eyebrow">MEET YOUR COACH</p>
+
+      <h2>
+        Learn from a<br>
+        creative who<br>
+        <em>does the work.</em>
+      </h2>
+
+      <div class="coach-copy">
+        <p>
+          I'm Olamide Tonia, an AI Creative Designer, Content Creator
+          and the founder of Tonia's Creatives Academy.
+        </p>
+
+        <p>
+          I created this masterclass to help people explore practical ways
+          to create digital content using Artificial Intelligence.
+        </p>
+
+        <p>
+          At TCA, the focus is on learning, creating and building the
+          confidence to experiment with new creative possibilities.
+        </p>
+      </div>
+
+      <div class="signature">
+        Olamide Tonia
+        <small>FOUNDER, TONIA'S CREATIVES ACADEMY</small>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ACCESS DETAILS -->
+
+  <section class="access">
+    <div class="container access-grid reveal">
+
+      <div>
+        <p class="eyebrow">YOUR ACCESS, MADE SIMPLE</p>
+        <h2>
+          Learn at your pace.<br>
+          <em>Keep creating.</em>
+        </h2>
+      </div>
+
+      <div class="access-list">
+        <div class="access-point">
+          <span class="check">✓</span>
+          <span>Pre-recorded lessons delivered through Google Drive</span>
+        </div>
+
+        <div class="access-point">
+          <span class="check">✓</span>
+          <span>Lifetime access to the training</span>
+        </div>
+
+        <div class="access-point">
+          <span class="check">✓</span>
+          <span>Access to your coach through WhatsApp</span>
+        </div>
+
+        <div class="access-point">
+          <span class="check">✓</span>
+          <span>Two additional bonuses included</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+
+  <section class="faq-section container">
+    <div class="faq-heading reveal">
+      <p class="eyebrow">GOOD TO KNOW</p>
+      <h2>Frequently asked questions.</h2>
+    </div>
+
+    <div class="faq-list reveal">
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Is this a live or pre-recorded masterclass?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          The masterclass is pre-recorded, so you can go through the lessons
+          at your own pace.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How will I receive the lessons?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          Lessons are delivered through Google Drive. After enrolment,
+          you'll receive the course access details.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Will I have access to the coach?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          Yes. Coach access is provided through WhatsApp.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          How long will I have access to the course?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          You'll have lifetime access to the masterclass.
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-question">
+          Do I need to know AI before joining?
+          <span>+</span>
+        </button>
+        <div class="faq-answer">
+          The masterclass is designed to introduce you to the listed
+          AI creative skills. You can begin by exploring the lessons
+          and practising as you learn.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ENROLMENT -->
+
+  <section class="final-cta container" id="enrol">
+    <div class="cta-card">
+      <div class="cta-content">
+
+        <p class="eyebrow">YOUR NEXT CREATIVE CHAPTER</p>
+
+        <h2>
+          Ready to create<br>
+          something <em>different?</em>
+        </h2>
+
+        <p class="cta-description">
+          Explore the TCA AI Content Creation Masterclass.
+        </p>
+
+        <p class="price-label">ONE-TIME PAYMENT</p>
+        <div class="price">₦8,500</div>
+
+        <a
+          class="cta-button"
+          href="https://selar.com/1j5lt8b44l"
+          target="_blank"
+          rel="noopener"
+        >
+          Enrol in the masterclass <span>↗</span>
+        </a>
+
+        <span class="secure-note">
+          Secure checkout through Selar
+        </span>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+
+  <footer class="footer container">
+    <a class="logo" href="#home">
+      <span class="logo-mark">T</span>
+      TCA<span>.</span>
+    </a>
+
+    <span class="footer-tagline">Learn. Create. Build with AI.</span>
+
+    <a class="back-top" href="#home">BACK TO TOP ↑</a>
+
+    <small>
+      © <span id="year"></span> Tonia's Creatives Academy.
+    </small>
+  </footer>
+
+  <script>
+    // MOBILE NAVIGATION
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+      menuToggle.textContent = navLinks.classList.contains("open") ? "×" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.textContent = "☰";
+      });
+    });
+
+    // MODULE CAROUSEL
+
+    const track = document.getElementById("moduleTrack");
+
+    document.getElementById("nextSlide").addEventListener("click", () => {
+      track.scrollBy({ left: track.clientWidth * 0.75, behavior: "smooth" });
+    });
+
+    document.getElementById("prevSlide").addEventListener("click", () => {
+      track.scrollBy({ left: -track.clientWidth * 0.75, behavior: "smooth" });
+    });
+
+    // FAQ ACCORDION
+
+    document.querySelectorAll(".faq-question").forEach(button => {
+      button.addEventListener("click", () => {
+        const item = button.parentElement;
+        const isOpen = item.classList.contains("active");
+
+        document.querySelectorAll(".faq-item").forEach(faq => {
+          faq.classList.remove("active");
+          faq.querySelector(".faq-question span:last-child").textContent = "+";
+        });
+
+        if (!isOpen) {
+          item.classList.add("active");
+          button.querySelector("span:last-child").textContent = "−";
+        }
+      });
+    });
+
+    // SCROLL REVEAL ANIMATIONS
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll(".reveal").forEach(element => {
+      observer.observe(element);
+    });
+
+    // CURRENT YEAR
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
